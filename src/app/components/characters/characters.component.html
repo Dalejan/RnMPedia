@@ -1,3 +1,20 @@
-<p>
-  characters works!
-</p>
+<p>characters works!</p>
+<div
+  class="results"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50"
+  [scrollWindow]="false"
+  (scrolled)="onScroll()"
+>
+  <mat-grid-list cols="2" rowHeight="2:1" *ngFor="let c of characters">
+    <div class="character_item">{{ c.name }}</div>
+  </mat-grid-list>
+</div>
+
+<div *ngIf="!finished; else: isFinished">Cargando más personajes</div>
+<ng-template #isFinished> No hay más personajes para mostar </ng-template>
+
+<div *ngIf="error != ''">
+  Ups, parece que hubo un error cargando los personajes {{ error }}
+</div>

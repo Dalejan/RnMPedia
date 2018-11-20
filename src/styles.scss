@@ -1,6 +1,4 @@
-
-
-@import "mat.sass";
+@import "mat.scss";
 
 html {
   width: 100vw;
@@ -34,7 +32,7 @@ body * {
 }
 
 ::-webkit-scrollbar-thumb {
-   background-color: $accent;
+  background-color: $accent;
 }
 
 ::-webkit-scrollbar-track {

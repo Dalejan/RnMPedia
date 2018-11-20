@@ -1,3 +1,6 @@
-<p>
-  home works!
-</p>
+<p>home works!</p>
+
+<div *ngFor="let c of randCharacters">{{ c.name }}</div>
+<div *ngIf="error != ''">
+  Ups, parece que ha ocurrido un error cargando los personajes: {{ error }}
+</div>
