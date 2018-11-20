@@ -34,11 +34,11 @@ export class CharacterDetailComponent implements OnInit {
   strError: String = null;
 
   /**
-   * Nombre: blIsLoading
+   * Nombre: blLoading
    * Tipo Boolean
    * Variable controla el estado de la petición http
    */
-  blIsLoading: Boolean = true;
+  blLoading: Boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -72,11 +72,11 @@ export class CharacterDetailComponent implements OnInit {
     this.apiService.getCharacterInfo(this.strIdCharacter).subscribe(
       (data: Character) => {
         this.objCharacter = data;
-        this.blIsLoading = false;
+        this.blLoading = false;
       },
       error => {
         this.strError = error;
-        this.blIsLoading = false;
+        this.blLoading = false;
       }
     );
   }

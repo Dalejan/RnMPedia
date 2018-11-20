@@ -1,5 +1,5 @@
 <p>character-detail works!</p>
-<div>{{ objCharacter.name }}</div>
+<div *ngIf="!blLoading">{{ objCharacter.name }}</div>
 <div *ngIf="error != null">
   Ups, parece que ha ocurrido un error cargando el personaje: {{ error | json }}
 </div>

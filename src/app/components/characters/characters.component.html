@@ -6,21 +6,18 @@
   [scrollWindow]="false"
   (scrolled)="onScroll()"
 >
-  <mat-grid-list
-    cols="2"
-    rowHeight="2:1"
-    *ngFor="let character of arrCharacters; let i = index"
-  >
-    <div class="character_item">
-      <a [routerLink]="['/detail', character.id]" routerLinkActive="active">
-        {{ character.name }}
-      </a>
-    </div>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <app-character-item
+      [appCheckGender]="character.gender"
+      [character]="character"
+      *ngFor="let character of arrCharacters"
+    >
+    </app-character-item>
   </mat-grid-list>
-</div>
 
-<div *ngIf="!finished; else: isFinished">Cargando más personajes</div>
-<ng-template #isFinished> No hay más personajes para mostar </ng-template>
+  <div *ngIf="!blFinished; else: isFinished">Cargando más personajes</div>
+  <ng-template #isFinished> No hay más personajes para mostar </ng-template>
+</div>
 
 <div *ngIf="error != null">
   Ups, parece que hubo un error cargando los personajes {{ error | json }}

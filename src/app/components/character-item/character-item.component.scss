@@ -1,0 +1,33 @@
+.char-container {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 250px;
+  min-height: 250px;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  -webkit-transition: box-shadow 1s; /* Safari */
+  transition: box-shadow 1s;
+
+  img {
+    border-radius: 15px;
+    max-width: 200px;
+    width: 20rem;
+  }
+  .char-name {
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    background: #8080806b;
+    color: #505050;
+    border-radius: 6px;
+    padding: 5px;
+  }
+}
+
+.char-container:hover {
+  box-shadow: 1px 2px 2px grey;
+  cursor: pointer;
+}

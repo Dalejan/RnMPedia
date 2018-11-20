@@ -24,7 +24,7 @@ export class CharactersComponent implements OnInit {
    * Tipo number
    * Variable que controla la página a la cuál hacer el llamado http
    */
-  numPage: number = 0;
+  numPage: number = 23;
 
   /**
    * Nombre: blFinished
@@ -40,6 +40,13 @@ export class CharactersComponent implements OnInit {
    * Variable que almacena la información de un error en al consulta http, si ocurre
    */
   strError: String = null;
+
+  /**
+   * Nombre: blLoading
+   * Tipo Boolean
+   * Variable controla el estado de la petición http
+   */
+  blLoading: Boolean = true;
 
   constructor(private apiService: FetchApiService) {}
 
@@ -77,8 +84,12 @@ export class CharactersComponent implements OnInit {
       this.apiService.getAllCharacters(this.numPage).subscribe(
         data => {
           this.arrCharacters = this.arrCharacters.concat(data["results"]);
+          this.blLoading = false;
         },
-        error => (this.strError = error)
+        error => {
+          this.strError = error;
+          this.blLoading = false;
+        }
       );
     }
   }

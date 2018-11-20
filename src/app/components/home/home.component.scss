@@ -1,0 +1,12 @@
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  width: 90vw;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1440px) {
+}

@@ -1,5 +1,14 @@
-<div *ngFor="let c of arrRandCharacters">{{ c.name }}</div>
-<div *ngIf="error != null">
-  Ups, parece que ha ocurrido un error cargando los personajes:
-  {{ error | json }}
+<div class="home-container">
+  <div *ngFor="let character of arrRandCharacters">
+    <app-character-item
+      [appCheckGender]="character.gender"
+      [character]="character"
+    >
+    </app-character-item>
+  </div>
+
+  <div *ngIf="error != null">
+    Ups, parece que ha ocurrido un error cargando los personajes:
+    {{ error | json }}
+  </div>
 </div>

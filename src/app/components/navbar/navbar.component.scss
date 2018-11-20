@@ -1,0 +1,12 @@
+nav {
+  a {
+    text-decoration: none;
+    color: black;
+    margin-right: 3rem;
+    -webkit-transition: text-shadow 1.5s; /* Safari */
+    transition: text-shadow 1.5s;
+  }
+  a:hover {
+    text-shadow: 1px 1px 1px rgb(51, 51, 51);
+  }
+}

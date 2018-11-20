@@ -25,6 +25,14 @@ export class HomeComponent implements OnInit {
    * Variable que almacena la información de un error en al consulta http, si ocurre
    */
   strError: String = null;
+
+  /**
+   * Nombre: blLoading
+   * Tipo Boolean
+   * Variable controla el estado de la petición http
+   */
+  blLoading: Boolean = true;
+
   constructor(private apiService: FetchApiService) {}
 
   /**
@@ -37,8 +45,12 @@ export class HomeComponent implements OnInit {
     this.apiService.getThreeCharacters().subscribe(
       (data: Character[]) => {
         this.arrRandCharacters = data;
+        this.blLoading = false;
       },
-      error => (this.strError = error)
+      error => {
+        this.strError = error;
+        this.blLoading = false;
+      }
     );
   }
 }

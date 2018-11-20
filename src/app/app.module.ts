@@ -19,6 +19,7 @@ import { MaterialModule } from "./modules/material.module";
 /**Infinite scroll module */
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { CheckGenderDirective } from './directives/check-gender.directive';
+import { CharacterItemComponent } from './components/character-item/character-item.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CheckGenderDirective } from './directives/check-gender.directive';
     CharactersComponent,
     CharacterDetailComponent,
     NavbarComponent,
-    CheckGenderDirective
+    CheckGenderDirective,
+    CharacterItemComponent
   ],
   imports: [
     BrowserModule,
