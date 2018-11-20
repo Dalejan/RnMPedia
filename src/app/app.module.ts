@@ -18,6 +18,7 @@ import { MaterialModule } from "./modules/material.module";
 
 /**Infinite scroll module */
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { CheckGenderDirective } from './directives/check-gender.directive';
 
 @NgModule({
   declarations: [
@@ -25,14 +26,12 @@ import { InfiniteScrollModule } from "ngx-infinite-scroll";
     HomeComponent,
     CharactersComponent,
     CharacterDetailComponent,
-    NavbarComponent
+    NavbarComponent,
+    CheckGenderDirective
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      appRoutes
-      // { enableTracing: true } // <-- debugging purposes only
-    ),
+    RouterModule.forRoot(appRoutes),
     HttpClientModule,
     MaterialModule,
     InfiniteScrollModule

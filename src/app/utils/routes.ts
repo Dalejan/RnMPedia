@@ -7,7 +7,7 @@ import { CharacterDetailComponent } from "../components/character-detail/charact
 export const appRoutes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "characters", component: CharactersComponent },
-  { path: "characters/:id", component: CharacterDetailComponent },
+  { path: "detail/:id", component: CharacterDetailComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: HomeComponent }
 ];
