@@ -8,7 +8,7 @@ Proyecto creado para prueba en DevHack.
 
 ## ¿Qué se usó?
 
-Se realizaron llamadas http a [THE RICK AND MORTY API]:https://rickandmortyapi.com/ 
+Se realizaron llamadas http a [THE RICK AND MORTY API](https://rickandmortyapi.com/)
 
 Versiones:
 `Angular-Cli version 6.2.7`
@@ -19,4 +19,4 @@ Versiones:
 
 ## Deploy
 
-Se realizó la compilación con ng-build y se hosteo el proyecto compilado en un [servicio de firebase]:https://ricknmorty-59e5f.firebaseapp.com/home
+Se realizó la compilación con ng-build y se hosteo el proyecto compilado en un [servicio de firebase](https://ricknmorty-59e5f.firebaseapp.com/home)
