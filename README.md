@@ -2,6 +2,10 @@
 
 Proyecto creado para prueba en DevHack.
 
+## Instalacin de dependencias
+
+`npm install`
+
 ## Servidor de desarrollo
 
 `ng serve`
