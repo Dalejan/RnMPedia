@@ -1,12 +1,26 @@
+@import "../../../mat.scss";
+
 .home-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 70vh;
   width: 90vw;
   margin: auto;
   flex-wrap: wrap;
+  button {
+    align-self: flex-end;
+    margin-left: 70%;
+    background: $accent;
+    color: white;
+  }
 }
 
-@media (min-width: 1440px) {
+@media (max-width: 600px) {
+  .home-container {
+    button {
+      position: sticky;
+      bottom: 15px;
+      z-index: 3;
+    }
+  }
 }

@@ -6,18 +6,17 @@
   [scrollWindow]="false"
   (scrolled)="onScroll()"
 >
-  <mat-grid-list cols="2" rowHeight="2:1">
-    <app-character-item
-      [appCheckGender]="character.gender"
-      [character]="character"
-      *ngFor="let character of arrCharacters"
-    >
-    </app-character-item>
-  </mat-grid-list>
-
+  <app-character-item
+    [appCheckGender]="character.gender"
+    [character]="character"
+    *ngFor="let character of arrCharacters"
+  >
+  </app-character-item>
   <div *ngIf="!blFinished; else: isFinished">Cargando más personajes</div>
-  <ng-template #isFinished> No hay más personajes para mostar </ng-template>
 </div>
+<!--
+  <ng-template #isFinished> No hay más personajes para mostar </ng-template>
+-->
 
 <div *ngIf="error != null">
   Ups, parece que hubo un error cargando los personajes {{ error | json }}

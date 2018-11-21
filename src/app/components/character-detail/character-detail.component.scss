@@ -1,0 +1,15 @@
+.character-detail-container {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+  flex: 1 0 12rem;
+
+  .character-detail-info {
+    flex: 1 0 12rem;
+  }
+  img {
+    border-radius: 50px;
+    padding: 20px;
+    max-height: 200px;
+  }
+}

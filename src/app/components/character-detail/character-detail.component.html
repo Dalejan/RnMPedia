@@ -1,5 +1,23 @@
-<p>character-detail works!</p>
-<div *ngIf="!blLoading">{{ objCharacter.name }}</div>
+<div *ngIf="!blLoading">
+  <mat-card class="character-detail-container">
+    <img [src]="objCharacter.image" alt="img_character" />
+    <div class="character-detail-info">
+      <h1>{{ objCharacter.name }}</h1>
+      <h4>id: {{ objCharacter.id }}</h4>
+      <h3>{{ objCharacter.gender }}</h3>
+      <h3>{{ objCharacter.status }} - {{ objCharacter.origin.name }}</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+  </mat-card>
+</div>
 <div *ngIf="error != null">
   Ups, parece que ha ocurrido un error cargando el personaje: {{ error | json }}
 </div>

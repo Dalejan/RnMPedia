@@ -1,6 +1,9 @@
 .results {
-  height: 15rem;
+  height: calc(87vh - 85px);
   overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   .character_item {
     background: green;
   }

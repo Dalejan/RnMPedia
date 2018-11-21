@@ -25,7 +25,6 @@ export class CheckGenderDirective implements OnInit {
    * @Output: none
    */
   ngOnInit() {
-    console.log("gender", this.appCheckGender, this.el.nativeElement);
     this.appCheckGender == "Female"
       ? this.renderer.setStyle(this.el.nativeElement, "backgorundColor", "blue")
       : this.renderer.setStyle(this.el.nativeElement, "backgorundColor", "red");

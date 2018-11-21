@@ -24,7 +24,7 @@ export class CharactersComponent implements OnInit {
    * Tipo number
    * Variable que controla la página a la cuál hacer el llamado http
    */
-  numPage: number = 23;
+  numPage: number = 0;
 
   /**
    * Nombre: blFinished
